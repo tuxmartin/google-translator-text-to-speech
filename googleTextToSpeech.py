@@ -34,7 +34,7 @@ for line in sys.stdin:
 cti = urllib.quote_plus(text)
 
 userAgent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:30.0) Gecko/20100101 Firefox/30.0";
-prikaz = "wget -q -U \"" + userAgent + "\" -O - \"http://translate.google.com/translate_tts?ie=UTF-8&tl="+ jazyk +"&q=" + cti + "\" | madplay -q -"
+prikaz = "wget -q -U \"" + userAgent + "\" -O - \"http://translate.google.com/translate_tts?ie=UTF-8&tl="+ jazyk +"&q=" + cti + "&total=1&idx=0&client=t\" | madplay -q -"
 #print prikaz
 call(["/bin/sh", "-c", prikaz])
 
